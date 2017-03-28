@@ -26,8 +26,14 @@ import PlaygroundSupport
 
 // Create canvas
 let canvas = Canvas(width: 500, height: 400)
+canvas.drawShapesWithBorders = false
+canvas.fillColor = Color(hue: 100, saturation: 100, brightness: 70, alpha: 75)
+var points : [NSPoint] = [] // create empty list (array) of type NSPoint
+points.append(NSPoint(x: 250, y: 350) )
+points.append(NSPoint(x: 350, y: 100) )
+points.append(NSPoint(x: 450, y: 350) )
 
-// Replace this comment and add your code below 
+canvas.drawCustomShape(with: points)
 
 
 /*:
