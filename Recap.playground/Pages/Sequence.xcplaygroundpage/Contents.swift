@@ -29,7 +29,9 @@ let canvas = Canvas(width: 500, height: 400)
 
 canvas.drawShapesWithBorders = false
 
-
+// circle
+canvas.fillColor = Color(hue: 10, saturation: 100, brightness: 90, alpha: 90)
+canvas.drawEllipse(centreX: 50, centreY: 150, width: 150, height: 150)
 
 // round rectangle
 canvas.fillColor = Color(hue: 45, saturation: 100, brightness: 90, alpha: 90)
