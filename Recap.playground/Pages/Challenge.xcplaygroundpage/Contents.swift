@@ -25,24 +25,31 @@ import Cocoa
 import PlaygroundSupport
 
 // Create canvas
-let canvas = Canvas(width: 400, height: 400)
+let canvas = Canvas(width: 480, height: 450)
 
 // Replace this comment and add your code below
-canvas.drawShapesWithBorders = false
+canvas.drawShapesWithFill = false
+canvas.defaultBorderWidth = 10
+canvas.defaultLineWidth = 10
 
 
-
-for x in stride(from: 30, through: 400, by: 61) {
-    canvas.fillColor = Color(hue: 26, saturation: 69, brightness: 37, alpha: 100)
-    canvas.drawEllipse(centreX: x, centreY: 370, width: 50, height: 50)
-    canvas.fillColor = Color(hue: 22, saturation: 93, brightness: 90, alpha: 100)
-    canvas.drawEllipse(centreX: x, centreY: 370, width: 34, height: 34)
-    canvas.fillColor = Color(hue: 53, saturation: 93, brightness: 98, alpha: 100)
-    canvas.drawEllipse(centreX: x, centreY: 370, width: 18, height: 18)
+for x in stride(from: 40, through: 500, by: 80) {
+    canvas.borderColor = Color(hue: 26, saturation: 69, brightness: 37, alpha: 100)
+    canvas.drawEllipse(centreX: x, centreY: 400, width: 60, height: 60)
+    canvas.borderColor = Color(hue: 22, saturation: 93, brightness: 90, alpha: 100)
+    canvas.drawEllipse(centreX: x, centreY: 400, width: 41, height: 41)
+    canvas.borderColor = Color(hue: 53, saturation: 93, brightness: 98, alpha: 100)
+    canvas.drawEllipse(centreX: x, centreY: 400, width: 21, height: 21)
 }
-for y in stride(from: 0, through: 400, by: 61) {
-    canvas.
+for y in stride(from: 0, through: 500, by: 80) {
+    canvas.borderColor = Color(hue: 26, saturation: 69, brightness: 37, alpha: 100)
+    canvas.drawEllipse(centreX: y, centreY: 300, width: 21, height: 21)
+    canvas.borderColor = Color(hue: 22, saturation: 93, brightness: 90, alpha: 100)
+    canvas.drawEllipse(centreX: y, centreY: 300, width: 41, height: 41)
+    canvas.borderColor = Color(hue: 53, saturation: 93, brightness: 98, alpha: 100)
+    canvas.drawEllipse(centreX: y, centreY: 300, width: 60, height: 60)
 }
+
 
 /*:
  ## Template code
